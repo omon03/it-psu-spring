@@ -1,5 +1,9 @@
 package ru.education.jpa;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,6 +11,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="product")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Product {
 
     @Id
@@ -15,7 +22,7 @@ public class Product {
 
     @Column(name = "name")
     private String name;
-
+/*
     public Product() {}
 
     public Integer getId() {
@@ -38,4 +45,5 @@ public class Product {
         this.id = id;
         this.name = name;
     }
+*/
 }
